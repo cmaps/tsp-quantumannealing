@@ -206,7 +206,7 @@ if __name__ == "__main__":
     print("\nD-WAVE OUTPUT:\n")
     print("--------------------------------------------------------------------")
 
-    sampler = EmbeddingComposite(DWaveSampler(endpoint='https://cloud.dwavesys.com/sapi', token='DEV-13b6075e1b67d5e873c76c692fc8b6c073ef7b34', solver={'topology__type': 'pegasus'}))
+    sampler = EmbeddingComposite(DWaveSampler(endpoint='https://cloud.dwavesys.com/sapi', token='DEV-XXXXXXXXXXXXXXXXXX', solver={'topology__type': 'pegasus'}))
 
     # Submit to the D-Wave with nr number of reads
     # Reads number
