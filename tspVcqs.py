@@ -221,7 +221,8 @@ if __name__ == "__main__":
     Gc = dnx.pegasus_graph(16, fabric_only=True) # Pegasus graph
     composite = dimod.StructureComposite(sa, Gc.nodes, Gc.edges)
     sampler = LazyFixedEmbeddingComposite(composite)
-    sa_computation = sa.sample_qubo(scale_qubo, num_reads=nr, num_sweeps=1000, seed=123, chain_strength=c) # 1000 sweeps n <= 7; 10000 sweeps n = 8; 300000 sweeps n = 9
+    sa_computation = sa.sample_qubo(scale_qubo, num_reads=nr, num_sweeps=1000, seed=123, chain_strength=c) 
+    # note: 1000 sweeps n <= 7; 10000 sweeps n = 8; 300000 sweeps n = 9
 
     elapsed_time = time.time() - start_time
 
