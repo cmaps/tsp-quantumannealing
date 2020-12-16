@@ -85,7 +85,8 @@ def exp1(n, v, A):
     for i in range(n):
         for j in range(n):
             exp += Constraint(1-v[i,j], label="exp")
-    exp = A*exp
+            
+    exp = Constraint(A*exp, label="exp")
     return(exp)
 
 def exp2(n, v, B):
@@ -95,7 +96,8 @@ def exp2(n, v, B):
             if (i != j):
                 for k in range(n): 
                     exp += Constraint(((v[i,k])*(v[j,k])), label="exp")
-    exp = B*exp
+                    
+    exp = Constraint(B*exp, label="exp")
     return(exp)
 
 def exp3(n, v, B):
@@ -105,7 +107,8 @@ def exp3(n, v, B):
             for k in range(n):
                 if (k != j):
                     exp += Constraint((v[i,j])*(v[i,k]), label="exp")
-    exp = B*exp
+                    
+    exp = Constraint(B*exp, label="exp")
     return(exp)
 
 def exp4(n, v):
@@ -210,7 +213,7 @@ if __name__ == "__main__":
     max_abs_value = float(max(abs(v) for v in qubo.values()))
     scale_qubo = {k: float(v) / max_abs_value for k, v in qubo.items()}
     sa = neal.SimulatedAnnealingSampler()
-    sa_computation = sa.sample_qubo(scale_qubo, num_reads=nr, num_sweeps=300000, seed=123, chain_strength=c)
+    sa_computation = sa.sample_qubo(scale_qubo, num_reads=nr, num_sweeps=1000, seed=123, chain_strength=c) # 1000 sweeps n <= 7; 10000 sweeps n = 8; 300000 sweeps n = 9
 
     elapsed_time = time.time() - start_time
 
