@@ -218,7 +218,7 @@ if __name__ == "__main__":
 
     start_time = time.time()
 
-    response = sampler.sample_qubo(qubo, num_reads = nr, chain_strength = c+10000) # n=7 c+10000
+    response = sampler.sample_qubo(qubo, num_reads = nr, chain_strength = c) # n=7 c+10000
 
     elapsed_time = time.time() - start_time
 
