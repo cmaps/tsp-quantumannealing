@@ -1,4 +1,4 @@
-# Script by Carla Silva and Inês Dutra 2020 :: TSP Classical Quantum Simulator Version
+# Script by Carla Silva and Inês Dutra 2021 :: TSP Classical Quantum Simulator Version
 
 """ TSP 
 
