@@ -1,4 +1,4 @@
-# Mapping travelling salesperson problem to quantum annealing
+# Mapping a logical representation of TSP to quantum annealing
 
 #### pegasus.py - code to generate the Pegasus
 #### tspVc.py - code to perform the classical experiments
